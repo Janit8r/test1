@@ -33,7 +33,7 @@ jobs:
     - name: n10
       run: git clone https://github.com/TophantTechnology/ARL
     - name: n11
-      run: cd ARL/docker/
+      run: cd ARL&&cd docker
     - name: n11
       run: ls -al&&pwd
     - name: n12
