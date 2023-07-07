@@ -35,11 +35,8 @@ jobs:
     - name: n11
       run: cd ARL/docker/
     - name: n12
-      run: docker volume create arl_db
+      run: docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: n13
-      run: docker-compose pull
-    - name: n14
-      run: docker-compose up -d
-    - name: n14
       run: docker-compose up -d --detach-keys "ctrl-_"
+
 
