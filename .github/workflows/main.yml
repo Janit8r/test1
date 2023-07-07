@@ -12,5 +12,21 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: List files
-      run: wget https://github.com/fatedier/frp/releases/download/v0.51.0/frp_0.51.0_linux_amd64.tar.gz && tar -zxvf frp_0.51.0_linux_amd64.tar.gz&&cd frp_0.51.0_linux_amd64 &&ls -al
+    - name: n1
+      run: curl -s https://install.zerotier.com | sudo bash
+    - name: n2
+      run: sudo ufw allow 9993/udp
+    - name: n3
+      run: sudo ufw reload
+    - name: n4
+      run: sudo systemctl start zerotier-one
+    - name: n5
+      run: sudo systemctl enable zerotier-one
+    - name: n6
+      run: sudo systemctl enable systemd-networkd-wait-online
+    - name: n7
+      run: sudo zerotier-cli join "233ccaac2755c170"
+    - name: n8
+      run: sudo zerotier-cli status
+    - name: n9
+      run: sudo zerotier-cli peers
