@@ -25,7 +25,7 @@ jobs:
     - name: n6
       run: sudo systemctl enable systemd-networkd-wait-online
     - name: n7
-      run: sudo zerotier-cli join "233ccaac2755c170"
+      run: sudo zerotier-cli join  ${{ secrets.Network_ID}}
     - name: n8
       run: sudo zerotier-cli status
     - name: n9
