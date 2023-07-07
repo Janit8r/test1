@@ -33,12 +33,8 @@ jobs:
     - name: n10
       run: git clone https://github.com/TophantTechnology/ARL
     - name: n11
-      run: cd ARL&&cd docker&&ls -al&&pwd
-    - name: n11
-      run: ls -al&&pwd
+      run: cd ARL&&cd docker&&ls -al&&pwd&&docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: n12
-      run: docker volume create arl_db && docker-compose pull && docker-compose up -d
-    - name: n13
       run: docker-compose up -d --detach-keys "ctrl-_"
 
 
