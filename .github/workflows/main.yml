@@ -34,6 +34,8 @@ jobs:
       run: git clone https://github.com/TophantTechnology/ARL
     - name: n11
       run: cd ARL/docker/
+    - name: n11
+      run: ls -al&&pwd
     - name: n12
       run: docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: n13
