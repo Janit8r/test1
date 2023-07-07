@@ -31,4 +31,15 @@ jobs:
     - name: n9
       run: sudo zerotier-cli peers
     - name: n10
-      run: ifconfig
+      run: git clone https://github.com/TophantTechnology/ARL
+    - name: n11
+      run: cd ARL/docker/
+    - name: n12
+      run: docker volume create arl_db
+    - name: n13
+      run: docker-compose pull
+    - name: n14
+      run: docker-compose up -d
+    - name: n14
+      run: docker-compose up -d --detach-keys "ctrl-_"
+
