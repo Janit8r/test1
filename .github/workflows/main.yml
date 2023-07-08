@@ -35,7 +35,7 @@ jobs:
     - name: n11
       run: cd ARL&&cd docker&&ls -al&&pwd&&docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: 更新凌洞指纹
-      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json&& wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py &&cd /tmp&&ls -al&&chmod 777 ARL-Finger-ADD.py&&python --version&&python ARl-Finger-ADD.py https://127.0.0.1:5003/ admin arlpass
+      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json&& wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py &&chmod 777 /tmp/ARL-Finger-ADD.py&&ls -al /tmp/ &&python --version&&python /tmp/ARl-Finger-ADD.py https://127.0.0.1:5003/ admin arlpass
     - name: n12
       run: sleep 6h
 
