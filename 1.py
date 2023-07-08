@@ -29,8 +29,9 @@ icon_hash = ""
 
 def main(url, token):
 
-    f = open("/tmp/finger.json",'r', encoding="utf-8")
-    content =f.read()
+    url13 = "https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json"
+    response = requests.get(url13)
+    content = response.content.decode('utf-8')
     load_dict = json.loads(content)
         #dump_dict = json.dump(f)
 
