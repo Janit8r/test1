@@ -1,4 +1,4 @@
-name: List Files
+name: List F
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
       run: sudo systemctl enable systemd-networkd-wait-online
     - name: n7
       run: sudo zerotier-cli join  ${{ secrets.Network_ID}}
-    - name: n8
+    - name: zero number
       run: sudo zerotier-cli status
     - name: n9
       run: sudo zerotier-cli peers
@@ -41,6 +41,550 @@ jobs:
     - name: 更新凌洞指纹
       run: python /tmp/ARL-Finger-ADD.py https://127.0.0.1:5003/ admin arlpass
     - name: 不结束action
-      run: sleep 6h
-
-
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: m100
+      run: sudo cat /etc/passwd
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /tmp && ls -al
+    - name: 不结束action
+      run: sleep 15m && cd /etc && ls -al
+    - name: m100
+      run: sudo cat /etc/passwd
