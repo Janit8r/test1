@@ -68,12 +68,18 @@ def main(url, token):
 
 def add_Finger(name, rule, url, token):
     headers = {
+        "Sec-Ch-Ua": " \"Chromium\";v=\"109\", \"Not_A Brand\";v=\"99\",
         "Accept": "application/json, text/plain, */*",
+        "Sec-Ch-Ua-Mobile": "?0",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
         "Connection": "close",
         "Token": "{}".format(token),
+        "Sec-Ch-Ua-Platform": "Windows",
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "zh-CN,zh;q=0.9",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
         "Content-Type": "application/json; charset=UTF-8"
     }
     url = "{}/api/fingerprint/".format(url)
@@ -106,9 +112,19 @@ if __name__ == '__main__':
             str_data = {"username": login_name, "password": login_password}
             login_data = json.dumps(str_data)
             login_res = requests.post(url="{}api/user/login".format(login_url), headers={
-                "Accept": "application/json, text/plain, */*",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
-                "Content-Type": "application/json; charset=UTF-8"}, data=login_data, verify=False)
+                        "Sec-Ch-Ua": " \"Chromium\";v=\"109\", \"Not_A Brand\";v=\"99\",
+                        "Accept": "application/json, text/plain, */*",
+                        "Sec-Ch-Ua-Mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
+                        "Connection": "close",
+                        "Token": "{}".format(token),
+                        "Sec-Ch-Ua-Platform": "Windows",
+                        "Accept-Encoding": "gzip, deflate",
+                        "Accept-Language": "zh-CN,zh;q=0.9",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "cors",
+                        "Sec-Fetch-Dest": "empty",
+                        "Content-Type": "application/json; charset=UTF-8"}, data=login_data, verify=False)
 
             # 判断是否登陆成功：
             if "401" not in login_res.text:
