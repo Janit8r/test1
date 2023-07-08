@@ -13,6 +13,8 @@ import sys
 import json
 import requests
 import socket
+import os
+
 
 requests.packages.urllib3.disable_warnings()
 
@@ -28,7 +30,8 @@ icon_hash = ""
 
 
 def main(url, token):
-
+    
+    print(os.getcwd())
     f = open("./finger.json",'r', encoding="utf-8")
     content =f.read()
     load_dict = json.loads(content)
