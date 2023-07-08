@@ -33,6 +33,7 @@ def main(url, token):
     response = requests.get(url13)
     content = response.content.decode('utf-8')
     load_dict = json.loads(content)
+    print(load_dict)
         #dump_dict = json.dump(f)
 
     body = "body=\"{}\""
