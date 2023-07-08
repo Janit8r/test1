@@ -32,10 +32,9 @@ icon_hash = ""
 def main(url, token):
     
     print(os.getcwd())
-    f = open("./finger.json",'r', encoding="utf-8")
+    f = open("./finger.json",'r', encoding='utf-8-sig')
     content =f.read()
     load_dict = json.loads(content)
-        #dump_dict = json.dump(f)
 
     body = "body=\"{}\""
     title = "title=\"{}\""
