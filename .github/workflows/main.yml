@@ -31,11 +31,11 @@ jobs:
     - name: n9
       run: sudo zerotier-cli peers
     - name: n10
-      run: git clone https://github.com/TophantTechnology/ARL
+      run: git clone https://github.com/Janit8r/ARL.git
     - name: n11
       run: cd ARL&&cd docker&&ls -al&&pwd&&docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: n11.2
-      run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/root/nuclei-templates/ && docker exec arl_web ls -al /root/nuclei-templates/
+      run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/tmp/
     - name: n12
       run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
     - name: 更新凌洞指纹
