@@ -1,9 +1,6 @@
 name: new-ACL
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
