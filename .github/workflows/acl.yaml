@@ -1,0 +1,42 @@
+name: new-ACL
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: n1
+      run: curl -s https://install.zerotier.com | sudo bash
+    - name: n2
+      run: sudo ufw allow 9993/udp
+    - name: n3
+      run: sudo ufw reload
+    - name: n4
+      run: sudo systemctl start zerotier-one
+    - name: n5
+      run: sudo systemctl enable zerotier-one
+    - name: n6
+      run: sudo systemctl enable systemd-networkd-wait-online
+    - name: n7
+      run: sudo zerotier-cli join  ${{ secrets.Network_ID}}
+    - name: n8
+      run: sudo zerotier-cli status
+    - name: n9
+      run: sudo zerotier-cli peers
+    - name: n10
+      run: git clone https://github.com/ki9mu/ARL-plus-docker.git
+    - name: n11
+      run: cd ARL-plus-docker&&docker-compose pull &&docker volume create arl_db &&docker-compose up -d
+    - name: n12
+      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
+    - name: 更新凌洞指纹
+      run: python /tmp/ARL-Finger-ADD.py https://127.0.0.1:5003/ admin arlpass
+    - name: 不结束action
+      run: sleep 6h
