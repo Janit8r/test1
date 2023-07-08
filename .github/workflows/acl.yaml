@@ -31,9 +31,7 @@ jobs:
     - name: n9
       run: sudo zerotier-cli peers
     - name: n10
-      run: git clone https://github.com/ki9mu/ARL-plus-docker.git
-    - name: n11
-      run: cd ARL-plus-docker&&docker-compose pull &&docker volume create arl_db &&docker-compose up -d
+      run: mkdir docker_arl &&wget -O docker_arl/docker.zip https://github.com/ki9mu/ARL-plus-docker/archive/refs/tags/v2.7.1.zip &&cd docker_arl &&unzip -o docker.zip &&docker-compose pull &&docker volume create arl_db &&docker-compose up -d
     - name: n12
       run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
     - name: 更新凌洞指纹
