@@ -97,7 +97,7 @@ def test(name,rule):
 
 if __name__ == '__main__':
     try:
-        if true :
+        if len(sys.argv)<99999999 :
             
             # 获取主机名
             hostname = socket.gethostname()
