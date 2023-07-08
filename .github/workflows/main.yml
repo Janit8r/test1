@@ -1,6 +1,9 @@
 name: List Files
 
 on:
+  push:
+    branches:
+      - mainv
   workflow_dispatch:
 
 jobs:
@@ -31,7 +34,7 @@ jobs:
       run: git clone https://github.com/TophantTechnology/ARL
     - name: n11
       run: cd ARL&&cd docker&&ls -al&&pwd&&docker volume create arl_db && docker-compose pull && docker-compose up -d
-    -name: n11.1
+    - name: n11.1
       run: ls -al /root/nuclei-templates
     - name: n12
       run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
