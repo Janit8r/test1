@@ -12,6 +12,7 @@ Email:        loecho@foxmail.com
 import sys
 import json
 import requests
+import socket
 
 requests.packages.urllib3.disable_warnings()
 
@@ -68,18 +69,12 @@ def main(url, token):
 
 def add_Finger(name, rule, url, token):
     headers = {
-        "Sec-Ch-Ua": " \"Chromium\";v=\"109\", \"Not_A Brand\";v=\"99\",
         "Accept": "application/json, text/plain, */*",
-        "Sec-Ch-Ua-Mobile": "?0",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
         "Connection": "close",
         "Token": "{}".format(token),
-        "Sec-Ch-Ua-Platform": "Windows",
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "zh-CN,zh;q=0.9",
-        "Sec-Fetch-Site": "same-origin",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Dest": "empty",
         "Content-Type": "application/json; charset=UTF-8"
     }
     url = "{}/api/fingerprint/".format(url)
@@ -102,29 +97,27 @@ def test(name,rule):
 
 if __name__ == '__main__':
     try:
-        if 1 < len(sys.argv) < 5 :
+        if true :
+            
+            # 获取主机名
+            hostname = socket.gethostname()
 
-            login_url = sys.argv[1]
-            login_name = sys.argv[2]
-            login_password = sys.argv[3]
+            # 获取 IP 地址
+            ip_address = socket.gethostbyname(hostname)
+
+            # 拼接 URL
+            url22 = f"https://{ip_address}:5003"
+            login_url = sys.argv[1] if len(sys.argv) > 1 else url22
+            login_name = sys.argv[2] if len(sys.argv) > 2 else "admin"
+            login_password = sys.argv[3] if len(sys.argv) > 3 else "arlpass"
 
             # login
             str_data = {"username": login_name, "password": login_password}
             login_data = json.dumps(str_data)
             login_res = requests.post(url="{}api/user/login".format(login_url), headers={
-                        "Sec-Ch-Ua": " \"Chromium\";v=\"109\", \"Not_A Brand\";v=\"99\",
-                        "Accept": "application/json, text/plain, */*",
-                        "Sec-Ch-Ua-Mobile": "?0",
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
-                        "Connection": "close",
-                        "Token": "{}".format(token),
-                        "Sec-Ch-Ua-Platform": "Windows",
-                        "Accept-Encoding": "gzip, deflate",
-                        "Accept-Language": "zh-CN,zh;q=0.9",
-                        "Sec-Fetch-Site": "same-origin",
-                        "Sec-Fetch-Mode": "cors",
-                        "Sec-Fetch-Dest": "empty",
-                        "Content-Type": "application/json; charset=UTF-8"}, data=login_data, verify=False)
+                "Accept": "application/json, text/plain, */*",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
+                "Content-Type": "application/json; charset=UTF-8"}, data=login_data, verify=False)
 
             # 判断是否登陆成功：
             if "401" not in login_res.text:
