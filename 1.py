@@ -106,7 +106,7 @@ if __name__ == '__main__':
             ip_address = socket.gethostbyname(hostname)
 
             # 拼接 URL
-            url22 = f"https://{ip_address}:5003"
+            url22 = f"https://{ip_address}:5003/"
             login_url = sys.argv[1] if len(sys.argv) > 1 else url22
             login_name = sys.argv[2] if len(sys.argv) > 2 else "admin"
             login_password = sys.argv[3] if len(sys.argv) > 3 else "arlpass"
