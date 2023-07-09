@@ -39,7 +39,7 @@ jobs:
     - name: n12
       run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json &&ls -al /tmp &&cat /tmp/finger.json
     - name: 更新凌洞指纹
-      run: sudo sh 1.sh
+      run: sudo bash 1.sh
     - name: 不结束action
       run: sleep 15m && cd /tmp && ls -al
     - name: 不结束action
