@@ -31,8 +31,8 @@ icon_hash = ""
 
 def main(url, token):
     
-    f = open("/tmp/finger.json",'r', encoding="utf-8")
-    content =f.read()
+    f11 = open("/tmp/finger.json",'r', encoding="utf-8")
+    content =f11.read()
     parsed_data = ast.literal_eval(content)
     cms_values = []
     keyword_values = []
@@ -56,7 +56,7 @@ def main(url, token):
         })
     json_result = json.dumps(result)
     with open('/tmp/y.json', 'w') as f:
-    f.write(json_result)
+        f.write(json_result)
 
     s = open("/tmp/y.json",'r', encoding="utf-8")
     content =s.read()
