@@ -37,10 +37,13 @@ def main(url, token):
             # 去除特殊字符并写入文件b
             clean_line = line.strip()
             output_file.write(clean_line)
-
-    f = open("/tmp/b.json",'r', encoding='utf-8')
-    content =f.read()
-    load_dict = json.loads(content)
+    
+    with open('/tmp/b.json', 'r') as input_file:
+    # 读取JSON数据
+    data = json.load(input_file)
+    # 格式化输出JSON数据
+    load_dict = json.dumps(data, indent=4)
+    
     body = "body=\"{}\""
     title = "title=\"{}\""
     hash = "icon_hash=\"{}\""
