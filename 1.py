@@ -15,6 +15,7 @@ import requests
 import socket
 import os
 import ast
+import re
 
 requests.packages.urllib3.disable_warnings()
 
@@ -33,16 +34,27 @@ def main(url, token):
     
     f11 = open("/tmp/finger.json",'r', encoding="utf-8")
     content =f11.read()
-    parsed_data = ast.literal_eval(content)
+    pattern_cms = r'"cms":\s*"([^"]+)"'
+    pattern_keyword = r'"keyword":\s*"([^"]+)"'
+    pattern_location = r'"location":\s*"([^"]+)"'
+    pattern_method = r'"method":\s*"([^"]+)"'
+    
+    matches_cms = re.findall(pattern_cms, json_string)
+    matches_keyword = re.findall(pattern_keyword, json_string)
+    matches_location = re.findall(pattern_location, json_string)
+    matches_method = re.findall(pattern_method, json_string)
     cms_values = []
     keyword_values = []
     location_values = []
     method_values = []
-    for fingerprint in parsed_data['fingerprint']:
-        cms_values.append(fingerprint['cms'])
-        keyword_values.append(fingerprint['keyword'])
-        location_values.append(fingerprint['location'])
-        method_values.append(fingerprint['method'])
+    for match in matches_cms:
+        cms_values.append(match)
+    for match in matches_keyword:
+        keyword_values.append(match)
+    for match in matches_location:
+        location_values.append(match)
+    for match in matches_method:
+        method_values.append(match)
     result = {
     "fingerprint": []
     }
