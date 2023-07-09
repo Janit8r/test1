@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # 设置请求URL和请求体
 url="https://127.0.0.1:5003/api/user/login"
