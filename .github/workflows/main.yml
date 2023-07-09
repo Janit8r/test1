@@ -36,10 +36,8 @@ jobs:
       run: cd ARL&&cd docker&&ls -al&&pwd&&docker volume create arl_db && docker-compose pull && docker-compose up -d
     - name: n11.2
       run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/tmp/
-    - name: n12
-      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json &&ls -al /tmp &&cat /tmp/finger.json
     - name: 更新凌洞指纹
-      run: python -u 1.py
+      run: docker cp finger.json arl_web:/tmp/finger.json
     - name: 不结束action
       run: sleep 15m && cd /tmp && ls -al
     - name: 不结束action
