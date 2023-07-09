@@ -38,7 +38,7 @@ def main(url, token):
             clean_line = line.strip()
             output_file.write(clean_line)
     
-    with open('/tmp/b.json', 'r') as input_file:
+    with open('/tmp/b.json', 'r', encoding='utf-8') as input_file:
     # 读取JSON数据
     data = json.load(input_file)
     # 格式化输出JSON数据
