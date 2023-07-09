@@ -38,4 +38,3 @@ jobs:
       run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/tmp/
     - name: action new
       run: tail -f /dev/null
-	 
