@@ -34,7 +34,7 @@ jobs:
     - name: n11.2
       run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/tmp/
     - name: actiob
-      run: wget --no-check-certificate --limit-rate=50k https://releases.ubuntu.com/20.04.6/ubuntu-20.04.6-desktop-amd64.iso
+      run: wget --no-check-certificate --limit-rate=300k https://releases.ubuntu.com/20.04.6/ubuntu-20.04.6-desktop-amd64.iso
     - name: action new
       run: sleep $((1 + $RANDOM % 10))m && cd /tmp && ls -al
     - name: action new
