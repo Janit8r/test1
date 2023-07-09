@@ -1,4 +1,4 @@
-name: new-ACL
+name: ACL指纹更新
 
 on:
   workflow_dispatch:
@@ -23,17 +23,13 @@ jobs:
       run: sudo systemctl enable systemd-networkd-wait-online
     - name: n7
       run: sudo zerotier-cli join  ${{ secrets.Network_ID}}
-    - name: n8
+    - name: 获取授权id
       run: sudo zerotier-cli status
     - name: n9
       run: sudo zerotier-cli peers
     - name: n9
       run: sleep 5m
-    - name: n10
+    - name: 下载凌洞指纹
       run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
     - name: 更新凌洞指纹
-      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
-    - name: 更新凌洞指纹
-      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
-    - name: 更新凌洞指纹
-      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
+      run: cd /tmp &&sudo python /tmp/ARL-Finger-ADD.py ${{ secrets.Url}} ${{ secrets.userName}} ${{ secrets.Password}}
