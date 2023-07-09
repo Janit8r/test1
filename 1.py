@@ -39,10 +39,10 @@ def main(url, token):
     pattern_location = r'"location":\s*"([^"]+)"'
     pattern_method = r'"method":\s*"([^"]+)"'
     
-    matches_cms = re.findall(pattern_cms, json_string)
-    matches_keyword = re.findall(pattern_keyword, json_string)
-    matches_location = re.findall(pattern_location, json_string)
-    matches_method = re.findall(pattern_method, json_string)
+    matches_cms = re.findall(pattern_cms, content)
+    matches_keyword = re.findall(pattern_keyword, content)
+    matches_location = re.findall(pattern_location, content)
+    matches_method = re.findall(pattern_method, content)
     cms_values = []
     keyword_values = []
     location_values = []
@@ -55,56 +55,28 @@ def main(url, token):
         location_values.append(match)
     for match in matches_method:
         method_values.append(match)
-    result = {
-    "fingerprint": []
-    }
-
-    for i in range(len(cms_values)):
-        result["fingerprint"].append({
-            "cms": cms_values[i],
-            "method": method_values[i],
-            "location": location_values[i],
-            "keyword": keyword_values[i]
-        })
-    json_result = json.dumps(result)
-    with open('/tmp/y.json', 'w') as f:
-        f.write(json_result)
-
-    s = open("/tmp/y.json",'r', encoding="utf-8")
-    content =s.read()
-    load_dict = json.loads(content)
-    body = "body=\"{}\""
-    title = "title=\"{}\""
-    hash = "icon_hash=\"{}\""
-
-    for i in load_dict['fingerprint']:
-        finger_json =  json.loads(json.dumps(i))
-        if finger_json['method'] == "keyword" and finger_json['location'] == "body":
-            name = finger_json['cms']
-            if len(finger_json['keyword']) > 0:
-                for rule in finger_json['keyword']:
-                    rule = body.format(rule)
-                else:
-                    rule = body.format(finger_json['keyword'][0])
+    print(len(method_values))
+    print(method_values[0])
+    for i in range(0, len(method_values)-1):
+        try:
+            if method_values[i] == "keyword" and location_values[i] == "body":
+                name = cms_values[i]
+                rule = keyword_values[i]
                 add_Finger(name, rule, url, token)
-
-        elif finger_json['method'] == "keyword" and finger_json['location'] == "title":
-            name = finger_json['cms']
-
-            if len(finger_json['keyword']) > 0:
-                for rule in finger_json['keyword']:
-                    rule = title.format(rule)
-                else:
-                    rule = title.format(finger_json['keyword'][0])
+            elif method_values[i] == "keyword" and location_values[i] == "title":
+                name = cms_values[i]
+                rule = keyword_values[i]
                 add_Finger(name, rule, url, token)
-        else:
-            name = finger_json['cms']
-            if len(finger_json['keyword']) > 0:
-                for rule in finger_json['keyword']:
-                    rule = hash.format(rule)
-                else:
-                    rule = hash.format(finger_json['keyword'][0])
+            elif method_values[i] == "faviconhash" and location_values[i] == "body":
+                name = cms_values[i]
+                rule = keyword_values[i]
                 add_Finger(name, rule, url, token)
+            elif method_values[i] == "keyword" and location_values[i] == "header":
+                name = cms_values[i]
+                rule = keyword_values[i]
+                add_Finger(name, rule, url, token)
+        except IndexError:
+            pass
 
 def add_Finger(name, rule, url, token):
     headers = {
