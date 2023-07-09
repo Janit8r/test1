@@ -3,7 +3,7 @@ name: List F
 on:
   push:
     branches:
-      - mainv
+      - main
   workflow_dispatch:
 
 jobs:
