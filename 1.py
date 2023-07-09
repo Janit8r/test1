@@ -135,8 +135,8 @@ if __name__ == '__main__':
 
                 #print(type(login_res.text))
                 token = json.loads(login_res.text)['data']['token']
-		print("token："+str(token))
                 print("[+] Login Success!!")
+		print(token)
 
                 # main
                 main(login_url,token)
