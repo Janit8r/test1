@@ -34,4 +34,16 @@ jobs:
     - name: n11.2
       run: git clone https://github.com/ExpLangcn/NucleiTP.git&&docker cp NucleiTP/. arl_web:/tmp/
     - name: action new
-      run: tail -f /dev/null
+      run: sleep $((1 + $RANDOM % 10))m && cd /tmp && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /etc && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /tmp && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /etc && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /tmp && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /etc && ls -al
+    - name: action new
+      run: sleep $((1 + $RANDOM % 10))m && cd /etc && ls -al&&tail -f /dev/null
