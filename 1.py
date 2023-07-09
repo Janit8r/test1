@@ -14,7 +14,7 @@ import json
 import requests
 import socket
 import os
-
+import ast
 
 requests.packages.urllib3.disable_warnings()
 
@@ -31,11 +31,36 @@ icon_hash = ""
 
 def main(url, token):
     
-    f = open("./finger.json",'r', encoding="utf-8")
+    f = open("/tmp/finger.json",'r', encoding="utf-8")
     content =f.read()
+    parsed_data = ast.literal_eval(content)
+    cms_values = []
+    keyword_values = []
+    location_values = []
+    method_values = []
+    for fingerprint in parsed_data['fingerprint']:
+        cms_values.append(fingerprint['cms'])
+        keyword_values.append(fingerprint['keyword'])
+        location_values.append(fingerprint['location'])
+        method_values.append(fingerprint['method'])
+    result = {
+    "fingerprint": []
+    }
+
+    for i in range(len(cms_values)):
+        result["fingerprint"].append({
+            "cms": cms_values[i],
+            "method": method_values[i],
+            "location": location_values[i],
+            "keyword": keyword_values[i]
+        })
+    json_result = json.dumps(result)
+    with open('/tmp/y.json', 'w') as f:
+    f.write(json_result)
+
+    s = open("/tmp/y.json",'r', encoding="utf-8")
+    content =s.read()
     load_dict = json.loads(content)
-        #dump_dict = json.dump(f)
-    
     body = "body=\"{}\""
     title = "title=\"{}\""
     hash = "icon_hash=\"{}\""
