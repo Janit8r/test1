@@ -31,11 +31,16 @@ icon_hash = ""
 
 def main(url, token):
     
-    print(os.getcwd())
-    f = open("./finger.json",'r', encoding='utf-8-sig')
+    with open('/tmp/finger.json', 'r', encoding='utf-8') as input_file:
+    with open('/tmp/b.json', 'w') as output_file:
+        for line in input_file:
+            # 去除特殊字符并写入文件b
+            clean_line = line.strip()
+            output_file.write(clean_line)
+
+    f = open("/tmp/b.json",'r', encoding='utf-8')
     content =f.read()
     load_dict = json.loads(content)
-
     body = "body=\"{}\""
     title = "title=\"{}\""
     hash = "icon_hash=\"{}\""
