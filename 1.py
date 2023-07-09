@@ -39,10 +39,10 @@ def main(url, token):
             output_file.write(clean_line)
     
     with open('/tmp/b.json', 'r', encoding='utf-8') as input_file:
-    # 读取JSON数据
-    data = json.load(input_file)
-    # 格式化输出JSON数据
-    load_dict = json.dumps(data, indent=4)
+            # 读取JSON数据
+            data = json.load(input_file)
+            # 格式化输出JSON数据
+            load_dict = json.dumps(data, indent=4)
     
     body = "body=\"{}\""
     title = "title=\"{}\""
