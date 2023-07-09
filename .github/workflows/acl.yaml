@@ -27,11 +27,13 @@ jobs:
       run: sudo zerotier-cli status
     - name: n9
       run: sudo zerotier-cli peers
+    - name: n9
+      run: sleep 5m
     - name: n10
-      run: mkdir docker_arl &&wget -O docker_arl/docker.zip https://github.com/ki9mu/ARL-plus-docker/archive/refs/tags/v2.7.1.zip &&cd docker_arl &&unzip -o docker.zip &&ls -al&&cd ARL-plus-docker-2.7.1 &&ls -al&&docker-compose pull &&docker volume create arl_db &&docker-compose up -d
-    - name: n12
-      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json
+      run: wget -P /tmp https://raw.githubusercontent.com/EdgeSecurityTeam/EHole/main/finger.json && wget -P /tmp https://raw.githubusercontent.com/loecho-sec/ARL-Finger-ADD/main/ARL-Finger-ADD.py
     - name: 更新凌洞指纹
-      run: python 1.py https://127.0.0.1:5003/ admin arlpass
-    - name: 不结束action
-      run: sleep 6h
+      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
+    - name: 更新凌洞指纹
+      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
+    - name: 更新凌洞指纹
+      run: cd /tmp && python /tmp/ARL-Finger-ADD.py https://10.147.19.111:5003/ admin arlpass
