@@ -1,0 +1,35 @@
+name: List3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: n1
+      run: |
+        sudo docker pull teddysun/v2ray
+        mkdir -p /etc/v2ray
+        cat > /etc/v2ray/config.json <<EOF
+          {
+            "inbounds": [{
+            "port": 9000,
+            "protocol": "vmess",
+            "settings": {
+            "clients": [
+            {
+              "id": "11c2a696-1111-4524-b22d-9a9c21512b02",
+              "level": 1,
+              "alterId": 64
+            }
+          ]
+        }
+      }],
+      "outbounds": [{
+        "protocol": "freedom",
+        "settings": {}
+      }]
+    }
+    EOF
+        sudo docker run -d -p 9000:9000 --name v2ray --restart=always -v /etc/v2ray:/etc/v2ray teddysun/v2ray
