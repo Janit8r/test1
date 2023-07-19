@@ -11,7 +11,7 @@ jobs:
       run: |
         sudo docker pull teddysun/v2ray
         sudo mkdir -p /etc/v2ray
-        sudo cd /etc/v2ray
+        cd /etc/v2ray
         sudo touch config.json
         sudo chmod 777 /etc/v2ray/config.json
         sudo ls -al
