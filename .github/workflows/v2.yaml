@@ -10,8 +10,8 @@ jobs:
     - name: n1
       run: |
         sudo docker pull teddysun/v2ray
-        mkdir -p /etc/v2ray
-          cat > /etc/v2ray/config.json << EOD
+        sudo mkdir -p /etc/v2ray
+        sudo cat > /etc/v2ray/config.json << EOD
           {
             "log": {
               "loglevel": "info"
