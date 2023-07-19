@@ -11,7 +11,8 @@ jobs:
       run: |
         sudo docker pull teddysun/v2ray
         sudo mkdir -p /etc/v2ray
-        sudo cat > /etc/v2ray/config.json << EOD
+        sudo chmod 777 /etc/v2ray/config.json
+        cat > /etc/v2ray/config.json << EOD
           {
             "log": {
               "loglevel": "info"
