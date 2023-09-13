@@ -1,0 +1,47 @@
+name: Download and upload 12
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  download:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v2
+    - name: Download file
+      run: |
+        curl --insecure -L -o 2.tar https://39.164.57.197:8443/upload/emap/society_new/2.tar
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: 2.tar
+        path: 2.tar
+        
+  upload:
+    needs: download
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v2
+    - uses: actions/download-artifact@v2
+      with:
+        name: 2.tar
+
+    - name: Install Git LFS
+      run: |
+        curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+        sudo apt-get install git-lfs
+        git lfs install
+        
+    - name: Track large files  
+      run: |
+        git lfs track "2.tar"
+        git add .gitattributes
+
+    - name: Commit and push
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"  
+        git commit -m "Upload large file"
+        git push
