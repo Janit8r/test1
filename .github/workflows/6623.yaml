@@ -1,8 +1,7 @@
 name: Download File
 
-on: 
-  schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight  
+on:
+  workflow_dispatch:
 
 jobs:
   download:
