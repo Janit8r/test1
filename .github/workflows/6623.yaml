@@ -30,7 +30,7 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v2
       with: 
-        name: file
+        name: 2.tar
         
     - name: Upload to repository  
       run: |
