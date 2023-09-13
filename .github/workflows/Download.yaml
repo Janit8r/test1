@@ -41,7 +41,7 @@ jobs:
 
     - name: Commit and push
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"  
+        git config --local user.email "1206577452@qq.com"
+        git config --local user.name "Janit8r"
         git commit -m "Upload large file"
         git push
