@@ -12,7 +12,7 @@ jobs:
     
     - name: Download file
       run: |
-        curl -L -o 2.tar https://39.164.57.197:8443/upload/emap/society_new/2.tar
+        curl --insecure -L -o 2.tar https://39.164.57.197:8443/upload/emap/society_new/2.tar
     
     - name: Upload file
       uses: actions/upload-artifact@v2
