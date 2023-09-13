@@ -1,0 +1,44 @@
+name: Download File
+
+on: 
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight  
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Download file
+      run: |
+        curl -L -o 2.tar https://39.164.57.197:8443/upload/emap/society_new/2.tar
+    
+    - name: Upload file
+      uses: actions/upload-artifact@v2
+      with:
+        name: 2.tar
+        path: 2.tar
+        
+  upload:
+    needs: download
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with: 
+        name: file
+        
+    - name: Upload to repository  
+      run: |
+        mkdir uploads
+        mv 2.tar uploads/
+        git config --local user.email "1206577452@qq.com"
+        git config --local user.name "Janit8r"
+        git add uploads
+        git commit -m "Add file"
+        git push
